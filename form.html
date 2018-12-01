@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Complete Bootstrap 4 Website Layout</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="myScript.js"></script>
+
+	<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> HOME </a>
+      </li>
+      <!-- Autentificare -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">  Autentificare </a>
+      </li>
+      <!-- Modalitate usoara de comunicare intre medici si pacienti-->
+      <li class="nav-item">
+        <a class="nav-link" href="#"> Chat </a>
+      </li>
+      <!-- Chestionar -->
+      <li class="nav-item">
+        <a class="nav-link" href="quiz.html"> Chestionar </a>
+      </li>
+      <!-- Vreau sa donez-->
+      <li class="nav-item">
+        <a class="nav-link" href="form.html"> Vreau sa donez </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+
+<div class="container mt-4">
+  <form action="#" method="post">
+
+    <div class="row pt-3">
+
+      <div class="col-3">
+        <select class="form-control" id="as_anrede">
+        <option>Barbat</option>
+        <option>Femeie</option>
+        <option>???</option>
+      </select>
+      </div>
+
+      <div class="col-4">
+    
+        <input type="text" class="form-control" id="as_vorname" placeholder="Nume">
+      </div>
+
+      <div class="col-5">
+    
+        <input type="text" class="form-control" id="as_nachname" placeholder="Prenume" onblur="fill_as_email()">
+      </div>
+
+    </div>
+
+    <div class="row pt-3">
+      <div class="col-6">
+        <input type="email" class="form-control" id="as_email" placeholder="e-mail">
+      </div>
+
+      <div class="col-3">
+        <input type="text" class="form-control" id="as_durchwahl" placeholder="Numar de telefon" maxlength="10">
+      </div>
+
+    </div>
+
+    <div class="row pt-3">
+
+      <div class="col">
+    
+        <select class="form-control" id="as_standort">
+        <option>Bucuresti</option>
+        <option>Dragasani</option>
+        <option>Baicoi</option>
+        <option>Craiova</option>
+        <option>Constanta</option>
+      </select>
+      </div>
+
+      <div class="col">
+        <select class="form-control" id="as_abteilung">
+        <option>Bucuresti</option>
+        <option>Valcea</option>
+        <option>Suceava</option>
+        <option>Dolj</option>
+        <option>Olt</option>
+      </select>
+      </div>
+
+    </div>
+
+    <hr>
+
+
+ <div class="alert alert-primary" role="alert">
+      <h2>Trimite o cerere si asteapta sa fii contactat de echipa Give Blood.</h2>
+      <div class="row">
+        <div class="col-8">
+     
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="write here" aria-label="Empfänger" aria-describedby="empfaenger">
+            <div class="input-group-append">
+              <span class="input-group-text" id="empfaenger">@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+
+  </form>
+</div>
