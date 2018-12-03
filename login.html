@@ -1,0 +1,93 @@
+<!-- Inspiration
+  https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood Donation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script src="myScript.js"></script>
+
+  <link href="style2.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> HOME </a>
+      </li>
+      <!-- Autentificare -->
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">  Autentificare </a>
+      </li>
+      <!-- Modalitate usoara de comunicare intre medici si pacienti-->
+      <li class="nav-item">
+        <a class="nav-link" href="chat.html"> Chat </a>
+      </li>
+      <!-- Chestionar -->
+      <li class="nav-item">
+        <a class="nav-link" href="quiz.html"> Chestionar </a>
+      </li>
+      <!-- Vreau sa donez-->
+      <li class="nav-item">
+        <a class="nav-link" href="form.html"> Vreau sa donez </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+
+
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button type="submit">login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+
+    <p><tt id=values>test</tt></p>
+
+  </div>
+</div>
+
+<script> 
+
+ $('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+ $( "form" ).submit(function() {
+  var str = $( "form" ).serialize();
+  $("#values").text(str);
+
+});
+</script>
+</body>
+</html>

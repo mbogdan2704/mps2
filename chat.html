@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood Donation</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="index.html"><img src="img/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"> HOME </a>
+      </li>
+      <!-- Autentificare -->
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">  Autentificare </a>
+      </li>
+      <!-- Modalitate usoara de comunicare intre medici si pacienti-->
+      <li class="nav-item">
+        <a class="nav-link" href="chat.html"> Chat </a>
+      </li>
+      <!-- Chestionar -->
+      <li class="nav-item">
+        <a class="nav-link" href="quiz.html"> Chestionar </a>
+      </li>
+      <!-- Vreau sa donez-->
+      <li class="nav-item">
+        <a class="nav-link" href="form.html"> Vreau sa donez </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+ 
+
+    <title>Chat</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">Chat</div>
+        <div class="window">
+            <div class="text" id="chat-output"></div>
+        </div>
+        <div class="chatbox">
+            <input placeholder="Type something here..." id="chat-input">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var chatinput = document.getElementById("chat-input");
+        var chatoutput = document.getElementById("chat-output");
+        var textstyle = document.querySelector(".text");
+        var chatarray = [];
+
+        var date = new Date();
+        var day = "["+date.getDate()+"."+date.getMonth()+"."+date.getFullYear()+"]:";
+        var time = "["+date.getHours()+":"+date.getMinutes()+"]:";
+
+        chatinput.addEventListener("keyup", function(event) {
+
+            event.preventDefault();
+
+            if (event.keyCode === 13) {
+                send();
+            }
+
+        });
+
+        function send() {
+
+            //TODO for SERVER
+            chattext = time+" "+chatinput.value;
+            chatarray.push(chattext);
+            var newchatarray = chatarray.join("\n");
+
+            chatoutput.innerText = newchatarray;
+            chatinput.value = "";
+
+            // Style
+            textstyle.style.backgroundColor = "#89d3ff";
+            textstyle.style.color = "#fff";
+            textstyle.style.padding = "10px 20px";
+            textstyle.style.borderRadius = "5px";
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>
