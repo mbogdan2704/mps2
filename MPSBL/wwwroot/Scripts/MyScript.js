@@ -27,9 +27,9 @@
 	// Find out which choice got the highest score.
 	// If you add more choices and outcomes, you must add the variable here.
 
-
+    
 	// Display answer corresponding to that choice
-	var answerbox = document.getElementById('answer');
+    var answerbox = document.getElementById('answer');
 	if (nr != 11) {
 		answerbox.innerHTML = "Va rugam raspundeti la toate intrebarile"
 		document.getElementById("link").style.display = "none";
