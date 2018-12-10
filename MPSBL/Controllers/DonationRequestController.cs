@@ -37,5 +37,12 @@ namespace MPSBL.Controllers
             };
             return View(model);
         }
+
+        [Route("/DonationRequest/Donate/{id}")]
+        public IActionResult Donate(int id)
+        {
+            _reqRepo.AddDonationToRequest(id);
+            return View();
+        }
     }
 }

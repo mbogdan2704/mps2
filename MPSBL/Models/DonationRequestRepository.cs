@@ -32,5 +32,12 @@ namespace MPSBL.Models
             _appDbContext.Requests.Add(req);
             _appDbContext.SaveChanges();
         }
+
+        public void AddDonationToRequest(int requestId)
+        {
+            var req =_appDbContext.Requests.SingleOrDefault(r => r.DonationRequestId == requestId);
+            req.numberDonated++;
+            _appDbContext.SaveChanges();
+        }
     }
 }

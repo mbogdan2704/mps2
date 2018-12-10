@@ -11,5 +11,6 @@ namespace MPSBL.Models
 
         DonationRequest GetDonationRequestById(int reqId);
         void AddRequest(DonationRequest req);
+        void AddDonationToRequest(int requestId);
     }
 }

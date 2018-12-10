@@ -1,5 +1,14 @@
 ﻿@model RequestViewModel
 
+<script type="text/javascript">
+
+    function donate(reqid) {
+        var id = reqid;
+        var url = "@Url.Action("Donate", "DonationRequest")";
+        window.location.assign(url);
+	}
+</script>
+
 <div class="thumbnail">
 	<div class="container">
 		<h3 class="pull-right">Request Nr. @Model.req.DonationRequestId</h3>
@@ -10,6 +19,6 @@
 		<p>@Model.req.Description</p>
 		<div class="text">Cererea a fost publicata pe: @Model.req.DateIssued</div>
 		<h5>@Model.req.numberDonated au donat</h5>
-		<button class="btn" style="background:#4CAF50">Doneaza!</button>
+        <input type="button" value="Doneaza" onclick="donate(@Model.req.DonationRequestId)" />
 	</div>
 </div>
