@@ -23,6 +23,7 @@ namespace MPSBL.Controllers
         {
             DonationRequestSListViewModel drlvModel = new DonationRequestSListViewModel();
             drlvModel.Requests = _reqRepo.Requests;
+            
             return View(drlvModel);
         }
 

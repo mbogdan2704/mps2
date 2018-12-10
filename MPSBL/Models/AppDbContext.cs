@@ -12,7 +12,7 @@ namespace MPSBL.Models
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            
+           
         }
 
         public DbSet<DonationRequest> Requests { get; set; }
